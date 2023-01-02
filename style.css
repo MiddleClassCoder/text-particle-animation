@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+}
+
+h1{
+    color: white;
+    font-size: 5rem;
+    position: relative;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 110%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(to right,transparent 0%, black 5%, black 100%);
+    animation: textAnimation 5.5s linear;
+    animation-delay: 2s;
+}
+@keyframes textAnimation{
+    0%{
+        left: 120%;
+    }
+    100%{
+        left: -20%;
+    }
+}
+h1 span{
+    color: red;
+}
+video{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    mix-blend-mode: screen;
+}
